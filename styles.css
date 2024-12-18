@@ -77,20 +77,21 @@ footer {
     justify-content: space-evenly; /* Evenly spread the buttons */
     align-items: center;
     width: 100%;
-    max-width: 600px; /* Increased max-width */
+    max-width: 100%; /* Ensure dynamic width for all devices */
+    padding: 0 10px; /* Add padding around buttons */
 }
 
 .footer-button {
     background-color: #fff;
     border: 2px solid #FFD700;
     padding: 15px;
-    margin: 0 10px; /* Increased margin between buttons */
+    margin: 0 5px; /* Reduced margin for small gaps */
     color: #333;
     font-size: 18px;
     font-weight: 500;
     border-radius: 10px;
-    width: 65px; /* Increased width */
-    height: 62px; /* Increased height */
+    width: 50px; /* Adjusted for small screens */
+    height: 50px; /* Adjusted for small screens */
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -108,7 +109,7 @@ footer {
 }
 
 .footer-button i {
-    font-size: 28px; /* Adjusted icon size */
+    font-size: 20px; /* Adjusted icon size */
     color: #333;
 }
 
@@ -129,15 +130,22 @@ footer {
 /* Media query for responsiveness */
 @media (max-width: 480px) {
     .footer-buttons {
-        max-width: 100%;
+        max-width: 100%; /* Dynamic width */
+        padding: 0 10px; /* Padding for better alignment */
     }
 
     .footer-button {
-        width: 60px; /* Reduced width for small screens */
-        height: 60px; /* Reduced height for small screens */
+        width: 50px; /* Reduced width for small screens */
+        height: 50px; /* Reduced height for small screens */
+        margin: 0 5px; /* Adjusted spacing */
+    }
+
+    .footer-button i {
+        font-size: 20px; /* Adjusted icon size */
     }
 
     header .site-name h1 {
-        font-size: 20px;
+        font-size: 20px; /* Adjusted font size */
     }
 }
+
