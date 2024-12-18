@@ -1,0 +1,143 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #fff;
+}
+
+/* Header Styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: white;
+    border-bottom: 2px solid #FFD700; /* Yellow border */
+}
+
+header .logo img {
+    width: 50px;
+    height: auto;
+}
+
+header .site-name h1 {
+    color: #333;
+    font-size: 30px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+}
+
+header .site-name h1 .wix {
+    color: #FFD700; /* Yellow */
+}
+
+header .site-name h1 .mart {
+    color: white; /* White */
+    position: relative;
+    padding: 0 8px;
+    margin-left: 5px;
+    text-decoration: none;
+    background-color: #FFD700;
+    box-shadow: 0 4px 10px rgba(255, 215, 0, 0.6); /* Yellow Shadow */
+}
+
+/* Main content styling */
+main {
+    flex-grow: 1;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Footer Styling - Fixed at the bottom */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    border-top: 2px solid #FFD700; /* Yellow border */
+    z-index: 1000; /* Keeps the footer above other content */
+}
+
+.footer-buttons {
+    display: flex;
+    justify-content: space-evenly; /* Evenly spread the buttons */
+    align-items: center;
+    width: 100%;
+    max-width: 600px; /* Increased max-width */
+}
+
+.footer-button {
+    background-color: #fff;
+    border: 2px solid #FFD700;
+    padding: 15px;
+    margin: 0 10px; /* Increased margin between buttons */
+    color: #333;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 10px;
+    width: 65px; /* Increased width */
+    height: 62px; /* Increased height */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.footer-button:hover {
+    background-color: #FFD700;
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(255, 215, 0, 0.6);
+}
+
+.footer-button i {
+    font-size: 28px; /* Adjusted icon size */
+    color: #333;
+}
+
+/* Special Style for Shopping Button */
+.shopping-btn {
+    background-color: #FFD700;
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(255, 215, 0, 0.6);
+    transform: scale(1.05);
+    border: none;
+}
+
+.shopping-btn:hover {
+    background-color: #FFCC00;
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.8);
+}
+
+/* Media query for responsiveness */
+@media (max-width: 480px) {
+    .footer-buttons {
+        max-width: 100%;
+    }
+
+    .footer-button {
+        width: 60px; /* Reduced width for small screens */
+        height: 60px; /* Reduced height for small screens */
+    }
+
+    header .site-name h1 {
+        font-size: 20px;
+    }
+}
