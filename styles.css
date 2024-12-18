@@ -75,12 +75,12 @@ footer {
 
 .footer-buttons {
     display: flex;
-    justify-content: space-evenly; /* Evenly spread the buttons */
+    justify-content: space-between; /* Evenly spaced buttons */
     align-items: center;
     width: 100%;
-    max-width: 600px; /* Increased max-width */
-    flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+    max-width: 800px; /* Increased max-width */
     gap: 10px; /* Space between buttons */
+    flex-wrap: wrap; /* Allow buttons to wrap to next line if necessary */
 }
 
 .footer-button {
@@ -92,8 +92,8 @@ footer {
     font-size: 18px;
     font-weight: 500;
     border-radius: 10px;
-    width: 65px; /* Increased width */
-    height: 62px; /* Increased height */
+    width: 80px; /* Increased width */
+    height: 80px; /* Increased height */
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -102,7 +102,6 @@ footer {
     transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
     text-decoration: none;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    flex: 1 1 60px; /* Ensure the buttons are flexible and adjust well */
 }
 
 /* Specific style for the shopping bag button */
@@ -226,18 +225,15 @@ footer {
 
 /* For smaller screens (e.g., mobile phones) */
 @media (max-width: 767px) {
-    .product-section .product-cart {
-        width: calc(50% - 10px); /* 2 items per row */
-    }
-
     .footer-buttons {
-        flex-direction: column; /* Stack buttons vertically on small screens */
-        gap: 15px; /* Increased gap between buttons when stacked */
+        justify-content: space-evenly; /* Keep buttons horizontal */
+        flex-wrap: nowrap; /* Prevent buttons from wrapping vertically */
+        gap: 10px; /* Adjust gap between buttons */
     }
 
     .footer-button {
-        width: 50px; /* Reduced width for small screens */
-        height: 50px; /* Reduced height for small screens */
+        width: 70px; /* Adjusted width for mobile */
+        height: 70px; /* Adjusted height for mobile */
     }
 
     header .site-name h1 {
