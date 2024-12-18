@@ -76,25 +76,25 @@ footer {
 
 .footer-buttons {
     display: flex;
-    justify-content: space-evenly; /* Evenly spaced buttons */
+    justify-content: space-between; /* Evenly spaced buttons */
     align-items: center;
     width: 100%;
     max-width: 800px; /* Increased max-width */
     gap: 10px; /* Space between buttons */
-    flex-wrap: wrap; /* Allow buttons to wrap to next line if necessary */
+    flex-wrap: nowrap; /* Prevents buttons from wrapping */
 }
 
 .footer-button {
     background-color: #fff;
     border: 2px solid #FFD700;
-    padding: 15px;
-    margin: 0 10px; /* Increased margin between buttons */
+    padding: 10px;
+    margin: 0 5px; /* Reduced margin between buttons */
     color: #333;
-    font-size: 18px;
+    font-size: 14px; /* Adjusted font size */
     font-weight: 500;
     border-radius: 10px;
-    width: 80px; /* Increased width */
-    height: 80px; /* Increased height */
+    width: 60px; /* Fixed width */
+    height: 60px; /* Fixed height */
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -120,7 +120,7 @@ footer {
 }
 
 .footer-button i {
-    font-size: 28px; /* Adjusted icon size */
+    font-size: 20px; /* Adjusted icon size */
     color: #333;
 }
 
@@ -131,51 +131,41 @@ footer {
     .footer-buttons {
         justify-content: space-between; /* Spread out buttons */
     }
-    .footer-button {
-        width: 100px; /* Increase size of buttons */
-        height: 100px; /* Increase size of buttons */
-    }
 }
 
 /* For medium screens (e.g., tablets) */
 @media (min-width: 768px) and (max-width: 1199px) {
     .footer-buttons {
-        justify-content: space-evenly; /* Space evenly */
-    }
-    .footer-button {
-        width: 90px; /* Medium size for buttons */
-        height: 90px; /* Medium size for buttons */
+        justify-content: space-between; /* Spread out buttons */
     }
 }
 
 /* For smaller screens (e.g., mobile phones) */
 @media (max-width: 767px) {
     .footer-buttons {
-        justify-content: space-evenly; /* Keep buttons horizontal */
-        flex-wrap: wrap; /* Allow buttons to wrap */
-        gap: 10px; /* Adjust gap between buttons */
+        justify-content: space-evenly; /* Keep buttons horizontally aligned */
     }
 
     .footer-button {
-        width: 70px; /* Adjusted width for mobile */
-        height: 70px; /* Adjusted height for mobile */
-        font-size: 16px; /* Adjusted font size for small screens */
+        width: 50px; /* Smaller buttons for mobile */
+        height: 50px; /* Smaller buttons for mobile */
+        font-size: 12px; /* Smaller font size */
     }
 
     .footer-button.shopping-btn {
-        width: 70px;
-        height: 70px;
+        width: 50px;
+        height: 50px;
     }
 }
 
 /* For very small screens */
 @media (max-width: 480px) {
     .footer-button {
-        width: 60px; /* Smaller buttons for very small screens */
-        height: 60px; /* Smaller buttons for very small screens */
+        width: 40px; /* Smaller buttons for very small screens */
+        height: 40px; /* Smaller buttons for very small screens */
     }
 
     header .site-name h1 {
-        font-size: 20px;
+        font-size: 18px;
     }
 }
